@@ -34,7 +34,7 @@
 
 @implementation SparkSetupResultViewController
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
     // set logo
     self.brandImageView.image = [SparkSetupCustomization sharedInstance].brandImage;
@@ -58,7 +58,7 @@
 
 }
 
-- (void)didReceiveMemoryWarning {
+-(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -208,12 +208,15 @@
 }
 
 
+-(IBAction)doneButtonTapped:(id)sender
+{
+    [SparkSetupResultViewController exitSetup:self.setupResult :self.device];
+}
 
-
-- (IBAction)doneButtonTapped:(id)sender
++ (void)exitSetup:(SparkSetupResult)setupResult :(SparkDevice *)device
 {
     NSMutableDictionary *userInfo = [NSMutableDictionary new];
-    if (self.setupResult == SparkSetupResultSuccess)
+    if (setupResult == SparkSetupResultSuccess)
     {
         // Update zero notice to user
         // TODO: condition message only if its really getting update zero
@@ -222,10 +225,10 @@
 
         userInfo[kSparkSetupDidFinishStateKey] = @(SparkSetupMainControllerResultSuccess);
         
-        if (self.device)
-            userInfo[kSparkSetupDidFinishDeviceKey] = self.device;
+        if (device)
+            userInfo[kSparkSetupDidFinishDeviceKey] = device;
     }
-    else if (self.setupResult == SparkSetupResultSuccessUnknown)
+    else if (setupResult == SparkSetupResultSuccessUnknown)
     {
         userInfo[kSparkSetupDidFinishStateKey] = @(SparkSetupMainControllerResultSuccessNotClaimed);
     }
@@ -242,7 +245,7 @@
 }
 
 
-- (IBAction)troubleshootingButtonTouched:(id)sender
+-(IBAction)troubleshootingButtonTouched:(id)sender
 {
     
     SparkSetupWebViewController* webVC = [[UIStoryboard storyboardWithName:@"setup" bundle:[NSBundle bundleWithIdentifier:SPARK_SETUP_RESOURCE_BUNDLE_IDENTIFIER]] instantiateViewControllerWithIdentifier:@"webview"];

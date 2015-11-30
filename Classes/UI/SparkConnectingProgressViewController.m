@@ -19,6 +19,7 @@
 #import "Spark-SDK.h"
 #endif
 #import "SparkSetupUIElements.h"
+#import "SparkSetupCustomization.h"
 #import "SparkSetupResultViewController.h"
 #ifdef ANALYTICS
 #import "Mixpanel.h"
@@ -447,7 +448,11 @@ typedef NS_ENUM(NSInteger, SparkSetupConnectionProgressState) {
                     [self nextConnectionProgressState];
                     
                     if (device.connected)
-                        self.setupResult = SparkSetupResultSuccess;
+                        
+                        if ([SparkSetupCustomization sharedInstance].disableDeviceRename == YES)
+                            [SparkSetupResultViewController exitSetup:self.setupResult :self.device];
+                        else
+                            self.setupResult = SparkSetupResultSuccess;
                     else
                         self.setupResult = SparkSetupResultSuccessDeviceOffline;
                     

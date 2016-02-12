@@ -3699,7 +3699,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dN-4C-Qip" userLabel="stepsView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dN-4C-Qip" userLabel="stepsView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfN-n0-GTz" userLabel="2View">
@@ -4062,7 +4062,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNy-JD-Bob" customClass="SparkSetupUIButton">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNy-JD-Bob" customClass="SparkSetupUIButton">
                                 <rect key="frame" x="80" y="228" width="248" height="32"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -4095,7 +4095,7 @@
                                     <action selector="readyButtonTapped:" destination="Z3p-Ig-NCk" eventType="touchUpInside" id="O4v-Zq-VIx"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spinner.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ald-Di-X3r" customClass="SparkSetupUISpinner">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spinner.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ald-Di-X3r" customClass="SparkSetupUISpinner">
                                 <rect key="frame" x="176" y="348" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="mst-fn-d3A">
@@ -4121,7 +4121,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZE-3U-nVp">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZE-3U-nVp">
                                 <rect key="frame" x="80" y="228" width="248" height="32"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -4160,7 +4160,7 @@
                                     <action selector="logoutButtonTouched:" destination="Z3p-Ig-NCk" eventType="touchUpInside" id="p4W-4M-Tjf"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="connect-to-power.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dom-kg-WP6">
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="connect-to-power.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dom-kg-WP6">
                                 <rect key="frame" x="0.0" y="-94" width="392" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="133" id="b6Q-1R-18e">
@@ -4218,7 +4218,7 @@
                                     <action selector="cancelSetup:" destination="Z3p-Ig-NCk" eventType="touchUpInside" id="3YB-XC-VhV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in as:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ys-oq-6AP" customClass="SparkSetupUILabel">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in as:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ys-oq-6AP" customClass="SparkSetupUILabel">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -4369,7 +4369,7 @@
                         <outlet property="readyButton" destination="UNy-JD-Bob" id="rdb-Dm-3Vu"/>
                         <outlet property="spinner" destination="Ald-Di-X3r" id="GZr-Bj-RKk"/>
                         <outlet property="view" destination="xP3-D7-C6C" id="T4Z-8r-EFD"/>
-                        <segue destination="DQd-hP-ryy" kind="show" identifier="discover" id="gy6-c9-WWy"/>
+                        <segue destination="DQd-hP-ryy" kind="show" identifier="discover" animates="NO" id="gy6-c9-WWy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JCV-Oc-kj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -5305,7 +5305,7 @@
         <image name="iosSettingWifi" width="70" height="41"/>
         <image name="leftChevron" width="64" height="64"/>
         <image name="lock" width="256" height="256"/>
-        <image name="spinner.png" width="300" height="277"/>
+        <image name="spinner.png" width="36" height="36"/>
         <image name="spinner_big" width="36" height="36"/>
         <image name="success" width="256" height="256"/>
         <image name="wifi3" width="64" height="64"/>

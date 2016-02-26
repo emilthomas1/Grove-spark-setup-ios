@@ -456,9 +456,10 @@ typedef NS_ENUM(NSInteger, SparkSetupConnectionProgressState) {
                       void (^__block attemptToContactDevice)(void) = ^(void)
                       {
                         NSLog(@"about to call ⌚️🐶⏲ on attempt #%d", currentNumberOfAttempts);
-                        [device callFunction:@"watchdogTime" withArguments:@[] completion:^(NSNumber *resultCode, NSError *error) {
+                        [device callFunction:@"muxFunction" withArguments:@[@"watchdogTime-"] completion:^(NSNumber *resultCode, NSError *error) {
                           if (error) {
                             NSLog(@"There was an error with the ⌚️🐶⏲");
+                            // NSLog(@"%@",[error localizedDescription]);
                             if (currentNumberOfAttempts == numberOfAttemptsBeforeErroring)
                             {
                               self.setupResult = SparkSetupResultSuccessDeviceOffline;

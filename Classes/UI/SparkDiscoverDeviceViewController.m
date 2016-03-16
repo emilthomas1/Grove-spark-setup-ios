@@ -82,7 +82,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.didGoToWifiListScreen = NO;
-    
+
     self.backgroundTask = UIBackgroundTaskInvalid;
     self.showMeHowButton.hidden = [SparkSetupCustomization sharedInstance].instructionalVideoFilename ? NO : YES;
     
@@ -115,14 +115,11 @@
     self.cancelSetupButton.titleLabel.font = [UIFont fontWithName:[SparkSetupCustomization sharedInstance].headerTextFontName size:self.self.cancelSetupButton.titleLabel.font.pointSize];
     [self.cancelSetupButton setTitleColor:[SparkSetupCustomization sharedInstance].normalTextColor forState:UIControlStateNormal];
 
-    
+
 #ifdef ANALYTICS
     [[Mixpanel sharedInstance] timeEvent:@"Device Setup: Device discovery screen activity"];
 #endif
-
-
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -436,11 +433,18 @@
 
                     if ([SparkCloud sharedInstance].isAuthenticated)
                     {
-                        // that means device is claimed by somebody else - we want to check that with user (and set claimcode if user wants to change ownership)
-                        NSString *messageStr = [NSString stringWithFormat:@"This %@ is has been setup before, do you want to override ownership to %@?",[SparkSetupCustomization sharedInstance].deviceName,[SparkCloud sharedInstance].loggedInUsername];
-                        self.changeOwnershipAlertView = [[UIAlertView alloc] initWithTitle:@"Product ownership" message:messageStr delegate:self cancelButtonTitle:nil otherButtonTitles:@"Yes",@"No",nil];
-                        [self.checkConnectionTimer invalidate];
-                        [self.changeOwnershipAlertView show];
+                      self.needToCheckDeviceClaimed = YES;
+                      [self setDeviceClaimCode];
+
+#ifdef ANALYTICS
+                      [[Mixpanel sharedInstance] timeEvent:@"Device Ownership Override!"];
+#endif
+
+//                        // that means device is claimed by somebody else - we want to check that with user (and set claimcode if user wants to change ownership)
+//                        NSString *messageStr = [NSString stringWithFormat:@"This %@ is has been setup before, do you want to override ownership to %@?",[SparkSetupCustomization sharedInstance].deviceName,[SparkCloud sharedInstance].loggedInUsername];
+//                        self.changeOwnershipAlertView = [[UIAlertView alloc] initWithTitle:@"Product ownership" message:messageStr delegate:self cancelButtonTitle:nil otherButtonTitles:@"Yes",@"No",nil];
+//                        [self.checkConnectionTimer invalidate];
+//                        [self.changeOwnershipAlertView show];
                     }
                     else // user skipped authentication so no need to claim or set claim code
                     {

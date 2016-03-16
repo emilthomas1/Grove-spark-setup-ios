@@ -79,8 +79,16 @@
     if ([SparkSetupCustomization sharedInstance].disableLogOutOption) {
         self.logoutButton.hidden = YES;
     }
-  
+
+    [self setNeedsStatusBarAppearanceUpdate];
+    // [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
     [self readyButtonTapped:self];
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+  NSLog(@"👽 LOGING FROM THE preferredStatusBarStyle FUNC");
+  return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {

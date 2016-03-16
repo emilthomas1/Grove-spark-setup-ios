@@ -50,7 +50,9 @@
     self.wifiTableView.delegate = self;
     self.wifiTableView.dataSource = self;
     self.wifiTableView.backgroundColor = [UIColor clearColor];
-    
+
+    self.selectNetworkLabel.textColor = [SparkSetupCustomization sharedInstance].elementBackgroundColor;
+
     // move to super viewdidload?
     self.brandImageView.image = [SparkSetupCustomization sharedInstance].brandImage;
     self.brandImageView.backgroundColor = [SparkSetupCustomization sharedInstance].brandImageBackgroundColor;

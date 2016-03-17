@@ -197,7 +197,7 @@
         {
             UILocalNotification *localNotification = [[UILocalNotification alloc] init];
             localNotification.alertAction = @"Connected";
-            NSString *notifText = [NSString stringWithFormat:@"Your phone has connected to %@. Tap to continue Setup.",[SparkSetupCustomization sharedInstance].deviceName];
+            NSString *notifText = [NSString stringWithFormat:@"Your phone connected to the %@. Tap to continue Setup.",[SparkSetupCustomization sharedInstance].deviceName];
             localNotification.alertBody = notifText;
             localNotification.alertAction = @"open"; // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
             localNotification.soundName = UILocalNotificationDefaultSoundName; // play default sound

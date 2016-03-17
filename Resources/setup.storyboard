@@ -2703,13 +2703,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your {device} is connecting to:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVc-hH-dHk" customClass="SparkSetupUILabel">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your {device} is connecting!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVc-hH-dHk" customClass="SparkSetupUILabel">
                                 <rect key="frame" x="117" y="291" width="384" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SSID" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="cOI-4H-O0J" customClass="SparkSetupUILabel">
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SSID" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="cOI-4H-O0J" customClass="SparkSetupUILabel">
                                 <rect key="frame" x="117" y="291" width="384" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2720,11 +2720,11 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(This can take about a minute)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pE1-ji-8tD" customClass="SparkSetupUILabel">
                                 <rect key="frame" x="117" y="291" width="384" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi3" translatesAutoresizingMaskIntoConstraints="NO" id="b2A-QU-4k0">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi3" translatesAutoresizingMaskIntoConstraints="NO" id="b2A-QU-4k0">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="Mpj-pt-XyB"/>
@@ -2747,7 +2747,7 @@
                                 <rect key="frame" x="180" y="38" width="240" height="196"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="Cy6-vn-7Pq"/>
+                                    <constraint firstAttribute="height" constant="64" id="Cy6-vn-7Pq"/>
                                 </constraints>
                             </imageView>
                             <view hidden="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7F-fD-FkN" customClass="SparkConnectingProgressView">
@@ -3153,7 +3153,7 @@
                             <constraint firstAttribute="centerX" secondItem="sVc-hH-dHk" secondAttribute="centerX" id="Gbn-bI-dwP"/>
                             <constraint firstItem="l7F-fD-FkN" firstAttribute="leading" secondItem="dyM-qm-UaJ" secondAttribute="leadingMargin" id="ILy-GI-FBy"/>
                             <constraint firstItem="l7F-fD-FkN" firstAttribute="trailing" secondItem="dyM-qm-UaJ" secondAttribute="trailingMargin" id="KyS-Qz-K2Q"/>
-                            <constraint firstItem="cOI-4H-O0J" firstAttribute="top" secondItem="sVc-hH-dHk" secondAttribute="bottom" constant="8" id="MvW-Cv-MyL"/>
+                            <constraint firstItem="cOI-4H-O0J" firstAttribute="top" secondItem="sVc-hH-dHk" secondAttribute="bottom" id="MvW-Cv-MyL"/>
                             <constraint firstItem="m7h-qk-v7W" firstAttribute="top" secondItem="c42-pG-Oeu" secondAttribute="bottom" constant="2" id="PLp-Te-Y5k"/>
                             <constraint firstItem="m7h-qk-v7W" firstAttribute="leading" secondItem="dyM-qm-UaJ" secondAttribute="leadingMargin" id="PWV-bg-bSp"/>
                             <constraint firstAttribute="centerX" secondItem="cOI-4H-O0J" secondAttribute="centerX" id="QDx-7G-uz9"/>
@@ -3179,8 +3179,8 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="2"/>
                             </constraint>
                             <constraint firstItem="cOI-4H-O0J" firstAttribute="leading" secondItem="b2A-QU-4k0" secondAttribute="trailing" constant="7" id="qLe-XA-m74"/>
-                            <constraint firstItem="pE1-ji-8tD" firstAttribute="top" secondItem="cOI-4H-O0J" secondAttribute="bottom" constant="7" id="thv-mV-dd6">
-                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            <constraint firstItem="pE1-ji-8tD" firstAttribute="top" secondItem="cOI-4H-O0J" secondAttribute="bottom" id="thv-mV-dd6">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="eud-gX-Qzz" secondAttribute="trailing" id="tnm-0N-i1s"/>
                             <constraint firstItem="b2A-QU-4k0" firstAttribute="centerY" secondItem="cOI-4H-O0J" secondAttribute="centerY" constant="-3.5" id="vgz-gB-H40">
@@ -4356,7 +4356,7 @@
                                 <rect key="frame" x="180" y="38" width="240" height="196"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="N9b-2O-3oO"/>
+                                    <constraint firstAttribute="height" constant="64" id="N9b-2O-3oO"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGH-RZ-uLL">
@@ -4735,7 +4735,7 @@
                                 <rect key="frame" x="180" y="38" width="240" height="196"/>
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="hi0-wH-het">
+                                    <constraint firstAttribute="height" constant="64" id="hi0-wH-het">
                                         <variation key="heightClass=regular-widthClass=compact" constant="64"/>
                                     </constraint>
                                 </constraints>
@@ -5011,22 +5011,22 @@
                                 <exclude reference="p7A-Fe-1Rf"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="KRG-Dw-b8X"/>
                                 <exclude reference="Utz-vd-AQS"/>
-                                <exclude reference="Ygq-PO-miY"/>
                                 <exclude reference="itu-8k-fCM"/>
                                 <exclude reference="WmV-f6-Q0Q"/>
                                 <exclude reference="2eE-h0-Qu8"/>
                                 <exclude reference="JX6-rL-YwW"/>
-                                <exclude reference="K0q-c5-kUL"/>
                                 <exclude reference="ih7-z5-R8M"/>
-                                <exclude reference="nS0-oc-Sr4"/>
                                 <exclude reference="zgk-pY-Ygm"/>
                                 <exclude reference="CpA-V9-uBo"/>
                                 <exclude reference="XJL-4L-gPc"/>
                                 <exclude reference="hkI-XL-vbU"/>
                                 <exclude reference="tpJ-VB-RSM"/>
                                 <exclude reference="yVZ-j1-6KF"/>
+                                <exclude reference="KRG-Dw-b8X"/>
+                                <exclude reference="Ygq-PO-miY"/>
+                                <exclude reference="K0q-c5-kUL"/>
+                                <exclude reference="nS0-oc-Sr4"/>
                                 <exclude reference="99F-Hs-XUX"/>
                                 <exclude reference="9oH-6U-lru"/>
                                 <exclude reference="H7b-Jz-AdD"/>
@@ -5047,22 +5047,22 @@
                                 <include reference="pY6-oD-PoU"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="KRG-Dw-b8X"/>
                                 <include reference="Utz-vd-AQS"/>
-                                <exclude reference="Ygq-PO-miY"/>
                                 <exclude reference="itu-8k-fCM"/>
                                 <include reference="WmV-f6-Q0Q"/>
                                 <include reference="2eE-h0-Qu8"/>
                                 <exclude reference="JX6-rL-YwW"/>
-                                <exclude reference="K0q-c5-kUL"/>
                                 <exclude reference="ih7-z5-R8M"/>
-                                <include reference="nS0-oc-Sr4"/>
                                 <include reference="zgk-pY-Ygm"/>
                                 <exclude reference="CpA-V9-uBo"/>
                                 <include reference="XJL-4L-gPc"/>
                                 <exclude reference="hkI-XL-vbU"/>
                                 <include reference="tpJ-VB-RSM"/>
                                 <exclude reference="yVZ-j1-6KF"/>
+                                <exclude reference="KRG-Dw-b8X"/>
+                                <exclude reference="Ygq-PO-miY"/>
+                                <exclude reference="K0q-c5-kUL"/>
+                                <include reference="nS0-oc-Sr4"/>
                                 <exclude reference="99F-Hs-XUX"/>
                                 <exclude reference="9oH-6U-lru"/>
                                 <exclude reference="H7b-Jz-AdD"/>
@@ -5263,7 +5263,7 @@
         <image name="wifi3" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MPJ-t5-PGI"/>
-        <segue reference="dk3-1h-vwt"/>
+        <segue reference="LMP-8O-ZPP"/>
+        <segue reference="c4T-fL-kLE"/>
     </inferredMetricsTieBreakers>
 </document>

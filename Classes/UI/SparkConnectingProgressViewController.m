@@ -94,7 +94,9 @@ typedef NS_ENUM(NSInteger, SparkSetupConnectionProgressState) {
     self.hostReachability = [Reachability reachabilityWithHostName:@"api.particle.io"]; //TODO: change to https://api...
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
     [self.hostReachability startNotifier];
-    
+
+    self.deviceIsConnectingLabel.textColor = [SparkSetupCustomization sharedInstance].elementBackgroundColor;
+
 //    self.connectAPsent = NO;
 //    self.disconnectedFromDevice = NO;
 

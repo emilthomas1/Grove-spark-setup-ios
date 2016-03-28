@@ -30,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameDeviceTextField;
 @property (strong, nonatomic) NSArray *randomDeviceNamesArray;
 
+@property (weak, nonatomic) IBOutlet SparkSetupUIButton *doneButton;
+
 @end
 
 @implementation SparkSetupResultViewController
@@ -108,8 +110,10 @@
         case SparkSetupResultSuccessDeviceOffline:
         {
             self.setupResultImageView.image = [SparkSetupMainController loadImageFromResourceBundle:@"warning"];
-            self.shortMessageLabel.text = @"Setup completed";
-            self.longMessageLabel.text = @"Your device has been successfully claimed to your account, however it is offline. If the device was already claimed before this setup, then the Wi-Fi connection may have failed, and you should try setup again.";
+            self.shortMessageLabel.text = @"Ecosystem didn't connect.";
+            self.shortMessageLabel.textColor = [SparkSetupCustomization sharedInstance].brandImageBackgroundColor;
+            self.longMessageLabel.text = @"Make sure your wifi password is accurate and try again. \n\nIf this happens again, hold the control knob down for 7 seconds. You'll see a blinking orange light. When you do, try wifi setup again.";
+            [self.doneButton setTitle:@"Retry Setup" forState:UIControlStateNormal];
             
 #ifdef ANALYTICS
             [[Mixpanel sharedInstance] track:@"Device Setup: Success" properties:@{@"reason":@"device offline"}];

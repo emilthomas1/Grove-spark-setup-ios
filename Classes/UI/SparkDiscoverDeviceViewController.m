@@ -203,7 +203,7 @@
             localNotification.alertAction = @"Connected";
             NSString *notifText = [NSString stringWithFormat:@"Your phone connected to the %@. Tap to continue Setup.",[SparkSetupCustomization sharedInstance].deviceName];
             localNotification.alertBody = notifText;
-            localNotification.alertAction = @"open"; // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
+            localNotification.alertAction = @"Open"; // text that is displayed after "slide to..." on the lock screen - defaults to "slide to view"
             localNotification.soundName = UILocalNotificationDefaultSoundName; // play default sound
             localNotification.fireDate = [[NSDate alloc] initWithTimeIntervalSinceNow:0];
             [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];

@@ -107,7 +107,7 @@
             self.setupResultImageView.image = [SparkSetupMainController loadImageFromResourceBundle:@"warning"];
             self.shortMessageLabel.text = @"Ecosystem didn't connect.";
             self.shortMessageLabel.textColor = [SparkSetupCustomization sharedInstance].brandImageBackgroundColor;
-            self.longMessageLabel.text = @"Make sure your wifi password is accurate and try again. \n\nIf this happens again, hold the control knob down for 7 seconds. You'll see a blinking orange light. When you do, try wifi setup again.";
+            self.longMessageLabel.text = @"Make sure your wifi password is accurate and try again. \n\nIf this happens again, hold the control knob down for 7 seconds. You'll see a blinking orange light. When you do, retry wifi setup.";
             [self.doneButton setTitle:@"Retry Setup" forState:UIControlStateNormal];
             
 #ifdef ANALYTICS
@@ -145,9 +145,11 @@
             
         case SparkSetupResultFailureCannotDisconnectFromDevice:
         {
-            self.setupResultImageView.image = [SparkSetupMainController loadImageFromResourceBundle:@"failure"];
-            self.shortMessageLabel.text = @"Oops!";
-            self.longMessageLabel.text = @"Setup process couldn't disconnect from the {device} Wi-fi network. This is an internal problem with the device, so please try running setup again after resetting your {device} and putting it back in listen mode (blinking blue LED) if needed.";
+            self.setupResultImageView.image = [SparkSetupMainController loadImageFromResourceBundle:@"warning"];
+            self.shortMessageLabel.text = @"Ecosystem didn't connect.";
+            self.longMessageLabel.text = @"Looks like there was a problem setting your Ecosystem up to wifi. \n\nPlease make sure your phone is connected to the internet and hold the control knob down for 7 seconds and release when your Ecosystem is blinking orange. (Error code: Jalapeño)";
+            [self.doneButton setTitle:@"Retry Setup" forState:UIControlStateNormal];
+
 #ifdef ANALYTICS
             [[Mixpanel sharedInstance] track:@"Device Setup: Failure" properties:@{@"reason":@"cannot disconnect"}];
 #endif
@@ -157,9 +159,10 @@
             
         case SparkSetupResultFailureConfigure:
         {
-            self.setupResultImageView.image = [SparkSetupMainController loadImageFromResourceBundle:@"failure"];
-            self.shortMessageLabel.text = @"Uh oh!";
-            self.longMessageLabel.text = @"Setup process couldn't disconnect from the {device} Wi-fi network. This is an internal problem with the device, so please try running setup again after resetting your {device} and putting it back in blinking blue listen mode if needed.";
+            self.setupResultImageView.image = [SparkSetupMainController loadImageFromResourceBundle:@"warning"];
+            self.shortMessageLabel.text = @"Ecosystem didn't connect.";
+            self.longMessageLabel.text = @"Looks like there was a problem configuring your Ecosystem. \n\nPlease make sure your phone is connected to the internet and hold the control knob down for 7 seconds and release when your Ecosystem is blinking orange. (Error code: Serrano Pepper)";
+            [self.doneButton setTitle:@"Retry Setup" forState:UIControlStateNormal];
 #ifdef ANALYTICS
             [[Mixpanel sharedInstance] track:@"Device Setup: Failure" properties:@{@"reason":@"cannot configure"}];
 #endif

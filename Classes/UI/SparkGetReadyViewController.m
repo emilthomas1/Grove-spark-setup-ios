@@ -177,7 +177,7 @@
             }
             else
             {
-                NSString *errStr = [NSString stringWithFormat:@"Could not communicate with Particle cloud. Make sure your iOS device is connected to the internet and retry.\n\n(%@)",error.localizedDescription];
+                NSString *errStr = [NSString stringWithFormat:@"Could not communicate with the Grove cloud. Make sure your iOS device is connected to the internet and retry.\n\n(%@)",error.localizedDescription];
                 UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errStr delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 errorAlertView.delegate = self;
                 [errorAlertView show];

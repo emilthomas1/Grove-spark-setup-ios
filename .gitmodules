@@ -4,3 +4,6 @@
 [submodule "Carthage/Checkouts/spark-sdk-ios"]
 	path = Carthage/Checkouts/spark-sdk-ios
 	url = https://github.com/spark/spark-sdk-ios.git
+[submodule "Carthage/Checkouts/mixpanel-iphone"]
+	path = Carthage/Checkouts/mixpanel-iphone
+	url = https://github.com/mixpanel/mixpanel-iphone.git

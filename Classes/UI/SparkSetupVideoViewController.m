@@ -10,7 +10,7 @@
 #import "SparkSetupCustomization.h"
 #import <MediaPlayer/MediaPlayer.h>
 #if ANALYTICS
-#import <Mixpanel.h>
+#import <Mixpanel/Mixpanel.h>
 #endif
 
 @interface SparkSetupVideoViewController ()

@@ -27,7 +27,7 @@
 #import "SparkSetupCommManager.h"
 
 #ifdef ANALYTICS
-#import <Mixpanel.h>
+#import <Mixpanel/Mixpanel.h>
 #endif
 
 @interface SparkDiscoverDeviceViewController () <NSStreamDelegate, UIAlertViewDelegate, SparkSelectNetworkViewControllerDelegate>

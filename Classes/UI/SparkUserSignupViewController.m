@@ -18,7 +18,7 @@
 #import "SparkSetupUIElements.h"
 #import "SparkSetupMainController.h"
 #ifdef ANALYTICS
-#import <Mixpanel.h>
+#import <Mixpanel/Mixpanel.h>
 #endif
 
 @interface SparkUserSignupViewController () <UITextFieldDelegate>

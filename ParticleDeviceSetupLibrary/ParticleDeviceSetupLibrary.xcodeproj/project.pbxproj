@@ -304,6 +304,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5038C5361CA21D190084D255 /* Build configuration list for PBXNativeTarget "ParticleDeviceSetupLibrary" */;
 			buildPhases = (
+				170693FE1D95AE7D00B10852 /* Carthage build */,
 				5038C5291CA21D190084D255 /* Sources */,
 				5038C52A1CA21D190084D255 /* Frameworks */,
 				5038C52B1CA21D190084D255 /* Headers */,
@@ -361,6 +362,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		170693FE1D95AE7D00B10852 /* Carthage build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../../../Build/iOS/Mixpanel.framework",
+			);
+			name = "Carthage build";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5038C5291CA21D190084D255 /* Sources */ = {

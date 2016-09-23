@@ -16,7 +16,7 @@
 #import "Spark-SDK.h"
 #endif
 #ifdef ANALYTICS
-#import "Mixpanel.h"
+#import <Mixpanel/Mixpanel.h>
 #endif
 
 

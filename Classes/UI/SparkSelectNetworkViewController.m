@@ -18,7 +18,7 @@
 #import "SparkSetupWifiTableViewCell.h"
 
 #ifdef ANALYTICS
-#import <Mixpanel.h>
+#import <Mixpanel/Mixpanel.h>
 #endif
 
 // TODO: move it somewhere else

@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "SparkSetupUIElements.h"
 #ifdef ANALYTICS
-#import <Mixpanel.h>
+#import <Mixpanel/Mixpanel.h>
 #endif
 
 //#import "UIViewController+SparkSetupMainController.h"

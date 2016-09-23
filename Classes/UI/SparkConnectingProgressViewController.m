@@ -22,7 +22,7 @@
 #import "SparkSetupCustomization.h"
 #import "SparkSetupResultViewController.h"
 #ifdef ANALYTICS
-#import "Mixpanel.h"
+#import <Mixpanel/Mixpanel.h>
 #endif
 
 NSInteger const kMaxRetriesDisconnectFromDevice = 10;

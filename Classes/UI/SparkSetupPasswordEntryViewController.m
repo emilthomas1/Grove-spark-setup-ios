@@ -14,7 +14,7 @@
 #import "SparkSetupCustomization.h"
 #import "SparkSetupMainController.h"
 #ifdef ANALYTICS
-#import <Mixpanel.h>
+#import <Mixpanel/Mixpanel.h>
 #endif
 
 @interface SparkSetupPasswordEntryViewController () <UITextFieldDelegate>

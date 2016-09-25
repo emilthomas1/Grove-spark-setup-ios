@@ -14,9 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Mixpanel (3.0.2):
-    - Mixpanel/Mixpanel (= 3.0.2)
-  - Mixpanel/Mixpanel (3.0.2)
   - Spark-SDK (0.4.1):
     - Spark-SDK/Helpers (= 0.4.1)
     - Spark-SDK/SDK (= 0.4.1)
@@ -27,7 +24,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - Mixpanel
   - Spark-SDK (from `../spark-sdk-ios`)
 
 EXTERNAL SOURCES:
@@ -36,9 +32,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Mixpanel: 0e4f1f9a2ac612b589b2894830038418c2587428
   Spark-SDK: e9f7713a28526157983d28c452f4f271e8496912
 
-PODFILE CHECKSUM: e28ba83a88a30b48d2df42d7d5e5745414410fc9
+PODFILE CHECKSUM: 19a25c3b88abfb42a39382b289b42129fb300e12
 
 COCOAPODS: 1.0.1

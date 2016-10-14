@@ -452,16 +452,31 @@ typedef NS_ENUM(NSInteger, SparkSetupConnectionProgressState) {
                     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC);
                     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                       
-                      int numberOfAttemptsBeforeErroring = 4;
+                      int numberOfAttemptsBeforeErroring = 5;
                       __block int currentNumberOfAttempts = 0;
                       
                       void (^__block attemptToContactDevice)(void) = ^(void)
                       {
                         NSLog(@"about to call ⌚️🐶⏲ on attempt #%d", currentNumberOfAttempts);
+                        // start a timer here
+                        NSDate *start = [NSDate date];
+
                         [device callFunction:@"muxFunction" withArguments:@[@"watchdogTime-"] completion:^(NSNumber *resultCode, NSError *error) {
                           if (error) {
                             NSLog(@"There was an error with the ⌚️🐶⏲");
-                            // NSLog(@"%@",[error localizedDescription]);
+                            NSLog(@"localizedDescription: %@", [error localizedDescription]);
+
+                            // if the timer hasn't reached 30 seconds, wait here until it does
+                            NSTimeInterval timeSinceCall = -[start timeIntervalSinceNow];
+                            NSLog(@"timeSinceCall: %f", timeSinceCall);
+
+                            if (timeSinceCall < 25)
+                            {
+                              NSTimeInterval waitFor = 30.0 - timeSinceCall;
+                              NSLog(@"Return call not long enough. Sleeping for %f seconds", waitFor);
+                              [NSThread sleepForTimeInterval:waitFor];
+                            }
+
                             if (currentNumberOfAttempts == numberOfAttemptsBeforeErroring)
                             {
                               self.setupResult = SparkSetupResultSuccessDeviceOffline;

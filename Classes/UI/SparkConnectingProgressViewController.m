@@ -452,7 +452,7 @@ typedef NS_ENUM(NSInteger, SparkSetupConnectionProgressState) {
                     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC);
                     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                       
-                      int numberOfAttemptsBeforeErroring = 2;
+                      int numberOfAttemptsBeforeErroring = 4;
                       __block int currentNumberOfAttempts = 0;
                       
                       void (^__block attemptToContactDevice)(void) = ^(void)

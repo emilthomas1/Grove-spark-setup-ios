@@ -165,8 +165,8 @@
         case SparkSetupResultFailureConfigure:
         {
             self.setupResultImageView.image = [SparkSetupMainController loadImageFromResourceBundle:@"warning"];
-            self.shortMessageLabel.text = @"Ecosystem didn't connect.";
-            self.longMessageLabel.text = @"Looks like there was a problem configuring your Ecosystem. \n\nPlease make sure your phone is connected to the internet and hold the control knob down for 7 seconds and release when your Ecosystem is blinking orange. (Error code: Serrano Pepper)";
+            self.shortMessageLabel.text = @"Grove could not connect.";
+            self.longMessageLabel.text = @"This can be caused by a few things. \n\n1. Incorrect password. Confirm you have the correct wifi info. \n\n2. Poor network signal. Stand closer to your router. \n\n3. Signal dropped at the wrong moment. Try again. \n\nIf this issue persists, go to bit.ly/grovewifi for a full troubleshooting guide. (Error code: Serrano Pepper)";
             [self.doneButton setTitle:@"Retry Setup" forState:UIControlStateNormal];
 #ifdef ANALYTICS
             [[Mixpanel sharedInstance] track:@"Device Setup: Failure" properties:@{@"reason":@"cannot configure"}];

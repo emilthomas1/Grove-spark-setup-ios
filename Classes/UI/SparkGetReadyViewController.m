@@ -181,8 +181,8 @@
             }
             else
             {
-                NSString *errStr = [NSString stringWithFormat:@"Could not communicate with the Grove cloud. Make sure your iOS device is connected to the internet and retry.\n\n(%@)",error.localizedDescription];
-                UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errStr delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                NSString *errStr = [NSString stringWithFormat:@"Make sure your mobile device is connected to the same wifi network you usually use to connect to the internet, then try again. If issue persists, see bit.ly/grovewifi for details.\n\n(%@)",error.localizedDescription];
+                UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Connection Not Found" message:errStr delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 errorAlertView.delegate = self;
                 [errorAlertView show];
             }

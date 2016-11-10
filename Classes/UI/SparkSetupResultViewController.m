@@ -110,7 +110,7 @@
         case SparkSetupResultSuccessDeviceOffline:
         {
             self.setupResultImageView.image = [SparkSetupMainController loadImageFromResourceBundle:@"warning"];
-            self.shortMessageLabel.text = @"Ecosystem didn't connect.";
+            self.shortMessageLabel.text = @"Grove didn't connect.";
             self.shortMessageLabel.textColor = [SparkSetupCustomization sharedInstance].brandImageBackgroundColor;
             self.longMessageLabel.text = @"Make sure your wifi password is accurate and try again. \n\nIf this happens again, hold the control knob down for 7 seconds. You'll see a blinking orange light. When you do, retry wifi setup.";
             [self.doneButton setTitle:@"Retry Setup" forState:UIControlStateNormal];
@@ -151,8 +151,8 @@
         case SparkSetupResultFailureCannotDisconnectFromDevice:
         {
             self.setupResultImageView.image = [SparkSetupMainController loadImageFromResourceBundle:@"warning"];
-            self.shortMessageLabel.text = @"Ecosystem didn't connect.";
-            self.longMessageLabel.text = @"Looks like there was a problem setting your Ecosystem up to wifi. \n\nPlease make sure your phone is connected to the internet and hold the control knob down for 7 seconds and release when your Ecosystem is blinking orange. (Error code: Jalapeño)";
+            self.shortMessageLabel.text = @"Grove didn't connect.";
+            self.longMessageLabel.text = @"Looks like there was a problem setting your grove up to wifi. \n\nPlease make sure your phone is connected to the internet and hold the control knob down for 7 seconds and release when your grove is blinking orange. (Error code: Jalapeño)";
             [self.doneButton setTitle:@"Retry Setup" forState:UIControlStateNormal];
 
 #ifdef ANALYTICS

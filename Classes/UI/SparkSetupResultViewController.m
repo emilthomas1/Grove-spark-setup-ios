@@ -110,9 +110,9 @@
         case SparkSetupResultSuccessDeviceOffline:
         {
             self.setupResultImageView.image = [SparkSetupMainController loadImageFromResourceBundle:@"warning"];
-            self.shortMessageLabel.text = @"Grove didn't connect.";
+            self.shortMessageLabel.text = @"Grove could not connect.";
             self.shortMessageLabel.textColor = [SparkSetupCustomization sharedInstance].brandImageBackgroundColor;
-            self.longMessageLabel.text = @"Make sure your wifi password is accurate and try again. \n\nIf this happens again, hold the control knob down for 7 seconds. You'll see a blinking orange light. When you do, retry wifi setup.";
+            self.longMessageLabel.text = @"This can be caused by a few things. \n 1. Incorrect password. Confirm you have the correct wifi info. \n 2. Poor network signal. Stand closer to your router. \n 3. Signal dropped at the wrong moment. Try again. \n If this issue persists, go to \n bit.ly/grovewifi for a full troubleshooting guide.";
             [self.doneButton setTitle:@"Retry Setup" forState:UIControlStateNormal];
             
 #ifdef ANALYTICS

@@ -3005,7 +3005,7 @@ It can take up to 3 minutes to connect.</string>
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirming ownership" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ve1-fl-5gg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finalizing connection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ve1-fl-5gg">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -5015,21 +5015,21 @@ It can take up to 3 minutes to connect.</string>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="KRG-Dw-b8X"/>
+                                <exclude reference="Utz-vd-AQS"/>
                                 <exclude reference="Ygq-PO-miY"/>
                                 <exclude reference="itu-8k-fCM"/>
                                 <exclude reference="WmV-f6-Q0Q"/>
+                                <exclude reference="2eE-h0-Qu8"/>
                                 <exclude reference="JX6-rL-YwW"/>
                                 <exclude reference="K0q-c5-kUL"/>
+                                <exclude reference="ih7-z5-R8M"/>
+                                <exclude reference="nS0-oc-Sr4"/>
                                 <exclude reference="zgk-pY-Ygm"/>
                                 <exclude reference="CpA-V9-uBo"/>
                                 <exclude reference="XJL-4L-gPc"/>
                                 <exclude reference="hkI-XL-vbU"/>
                                 <exclude reference="tpJ-VB-RSM"/>
                                 <exclude reference="yVZ-j1-6KF"/>
-                                <exclude reference="Utz-vd-AQS"/>
-                                <exclude reference="2eE-h0-Qu8"/>
-                                <exclude reference="ih7-z5-R8M"/>
-                                <exclude reference="nS0-oc-Sr4"/>
                                 <exclude reference="99F-Hs-XUX"/>
                                 <exclude reference="9oH-6U-lru"/>
                                 <exclude reference="H7b-Jz-AdD"/>
@@ -5051,21 +5051,21 @@ It can take up to 3 minutes to connect.</string>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="KRG-Dw-b8X"/>
+                                <include reference="Utz-vd-AQS"/>
                                 <exclude reference="Ygq-PO-miY"/>
                                 <exclude reference="itu-8k-fCM"/>
                                 <include reference="WmV-f6-Q0Q"/>
+                                <include reference="2eE-h0-Qu8"/>
                                 <exclude reference="JX6-rL-YwW"/>
                                 <exclude reference="K0q-c5-kUL"/>
+                                <exclude reference="ih7-z5-R8M"/>
+                                <include reference="nS0-oc-Sr4"/>
                                 <include reference="zgk-pY-Ygm"/>
                                 <exclude reference="CpA-V9-uBo"/>
                                 <include reference="XJL-4L-gPc"/>
                                 <exclude reference="hkI-XL-vbU"/>
                                 <include reference="tpJ-VB-RSM"/>
                                 <exclude reference="yVZ-j1-6KF"/>
-                                <include reference="Utz-vd-AQS"/>
-                                <include reference="2eE-h0-Qu8"/>
-                                <exclude reference="ih7-z5-R8M"/>
-                                <include reference="nS0-oc-Sr4"/>
                                 <exclude reference="99F-Hs-XUX"/>
                                 <exclude reference="9oH-6U-lru"/>
                                 <exclude reference="H7b-Jz-AdD"/>
@@ -5266,7 +5266,7 @@ It can take up to 3 minutes to connect.</string>
         <image name="wifi3" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Lg4-P5-Mxv"/>
         <segue reference="LMP-8O-ZPP"/>
+        <segue reference="c4T-fL-kLE"/>
     </inferredMetricsTieBreakers>
 </document>
